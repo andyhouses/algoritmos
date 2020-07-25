@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Number of Islands</h1>
+      <p>Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. </p>
+      <p>An island is surrounded by water and is formed by connecting adjacent lands </p>
+      <p>horizontally or vertically. You may assume all four edges of the grid are </p>
+      <p>all surrounded by water.</p>
+      <p>URL: <a href="https://leetcode.com/problems/number-of-islands/">leetcode</a></p>
+    </div>
+
+    <script type="text/javascript">
+      /**
+      * @param {character[][]} grid
+      * @return {number}
+      */
+      const numIslands = function(grid) {
+        const islands = [];
+        for (let i = 0; i < grid.length; i++) {
+          for (let j = 0; j < grid.length; j++) {
+            console.log("i = ", i);
+            console.log("j = ", j);
+            console.log(grid[i][j]);
+            const currentElement = grid[i][j];
+            if (currentElement == 1) {
+              if (islands.length == 0) {
+                islands[i] = [[i, j]];
+              }
+            }
+          }
+        }
+        console.log(islands);
+        return 0;
+      };
+
+      const grid = [
+        ["1","1"],
+        ["1","0"],
+      ];
+
+      const result = numIslands(grid);
+
+      console.log("*** RESULT ***");
+      console.log(result);
+
+    </script>
+  </body>
+</html>
